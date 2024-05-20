@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| DOM with Remove and Delete |</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    // function addLanguage(langName) {
+    //   const li = document.createElement("li");
+    //   li.innerHTML = `${langName}`;
+    //   document.querySelector(".language").appendChild(li);
+    // }
+    // addLanguage("Python");
+    // addLanguage("typeScript");
+
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("DSA");
+    addOptiLanguage("Go-Lang");
+
+    //Edit
+    const seclang = document.querySelector("li:nth-child(2)");
+    // seclang.innerHTML = "C++";
+    const newLi = document.createElement("li");
+    newLi.textContent = "MOjo";
+    seclang.replaceWith(newLi);
+
+    //edit
+    const fristlang = document.querySelector("li:first-child");
+    fristlang.outerHTML = "<li>TypeScript</ti>";
+
+    //remove
+    const lastName = document.querySelector("li:last-child");
+    lastName.remove();
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApiRequrest</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body style="background-color: #121212">
+    <div class="card">
+      <div class="card-content">
+        <img src="" />
+        <div class="card-info">
+          <h2></h2>
+          <p></p>
+          <p id="p2"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const requrestURL = "https://api.github.com/users/yuvrajbagale";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requrestURL);
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText);
+        document
+          .querySelector(".card img")
+          .setAttribute("src", `${data.avatar_url}`);
+        document.querySelector("h2").innerHTML = `${data.name}`;
+        document.querySelector("p").innerHTML = `Following : ${data.following}`;
+        document.getElementById("p2").innerHTML = `login_Name : ${data.login}`;
+        // console.log(data);
+      }
+    };
+    xhr.send();
+  </script>
+</html>

@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    color: white;
+    font-family: "Fira Code";
+    background-image: url(./assets/bg.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 10vh;
+    background-color: #000;
+}
+.navbar-elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+.navbar-list{
+    list-style: none;
+    gap: 70px;
+}
+li{
+    cursor: pointer;
+    font-weight: 500;
+}
+li:hover{
+    opacity: .8;
+}
+img{
+    height: 30px;
+    cursor: pointer;
+}
+
+.line{
+    border: 1px solid #fff;
+    height: 6vh;
+    background-color: #fff;
+}
+
+.button-buy{
+    background-color: rgb(247, 41, 247);
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.button-buy:hover {
+    background-color: white;
+    color: rgb(247, 41, 247);
+}
+
+.hero{
+    
+    background-repeat: no-repeat;
+    padding-top: 8%;
+    text-align: center;
+}
+.main-heding{
+    font-size: 72px;
+}
+.sub-heading{
+    font-size: 25px;
+    padding-top: 1px;
+}
+.btn-req{
+    margin-top: 20px;
+    background-color: rgb(247, 41, 247);
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.btn-req:hover{
+    background-color: #fff;
+    color: rgb(247, 41, 247);
+}
